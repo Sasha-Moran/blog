@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Post: {{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="post-position">
+    <div class="card mb-3">
+        <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <div class="post-info">
+                <small class="text-muted">
+                Author: {{ post.author }}
+                Created: {{ post.created_date|date:'d.m.Y H:i' }}
+                Published: {{ post.published_date|date:'d.m.Y H:i' }}
+                </small>
+            </div>
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.text }}</p>
+            <p class="card-text"><small class="text-muted">Last updated {{ post.updated_date|date:'d.m.Y H:i' }}</small></p>
+      </div>
+    </div>
+</div>
+{% endblock %}

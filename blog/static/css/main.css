@@ -1,0 +1,25 @@
+body {
+	background-color: #f2f5fa;
+}
+
+.bg-navbar {
+	background-color: #333333;
+}
+
+.post-position {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 800px;
+}
+
+.post-info {
+    text-align: right;
+}
+
+@media screen and (max-width: 992px) {
+	.post-position {
+	    width: auto;
+	}
+
