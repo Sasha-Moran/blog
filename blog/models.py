@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
 
+from tinymce import models as tinymce_models
+
 
 class AdvancedUser(AbstractUser):
     image = models.ImageField(upload_to='user-pictures/',
@@ -13,7 +15,7 @@ class AdvancedUser(AbstractUser):
 class Post(models.Model):
     author = models.ForeignKey(AdvancedUser, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text = tinymce_models.HTMLField()
     image = models.ImageField(upload_to='post_images/',
                               verbose_name='Post image',
                               null=True, blank=True)

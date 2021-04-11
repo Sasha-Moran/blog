@@ -1,9 +1,9 @@
 body {
-	background-color: #f2f5fa;
+    background-color: #f2f5fa;
 }
 
 .bg-navbar {
-	background-color: #333333;
+    background-color: #333333;
 }
 
 .post-position {
@@ -19,7 +19,7 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-	.post-position {
-	    width: auto;
-	}
+    .post-position {
+        width: auto;
+    }
 }

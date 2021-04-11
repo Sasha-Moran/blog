@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'easy_thumbnails'
+    'easy_thumbnails',
+    'tinymce'
 ]
 
 MIDDLEWARE = [
