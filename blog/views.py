@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
+from django.utils import timezone
 
 from .models import Post, Tag
 
 
 def post_list(request):
-    posts = Post.objects.all()[:10]
+    posts = Post.objects.filter(published_date__lte=timezone.now())
     return render(request, 'blog/post_list.html', context={'posts': posts})
 
 
